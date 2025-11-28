@@ -74,12 +74,10 @@ const createJobIfNotExists = async (jobData) => {
 }
 
 const updateCompany = async (email, updateData) => {
-  // Remove sensitive or non-updatable fields if they exist in updateData
-  const { password, email: emailField, companyId, ...dataToUpdate } = updateData;
 
   const updatedCompany = await prisma.companies.update({
     where: { email: email },
-    data: dataToUpdate,
+    data: updateData,
   });
 
   return updatedCompany;
