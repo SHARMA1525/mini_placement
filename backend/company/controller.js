@@ -26,9 +26,9 @@ const companylogin = async (req, res) => {
       return res.status(401).json({ error: 'Invalid password' });
 
     }
-    if (existing.status === false) {
-      return res.status(403).json({ error: 'Company account is not approved yet.' });
-    }
+    // if (existing.status === false) {
+    //   return res.status(403).json({ error: 'Company account is not approved yet.' });
+    // }
     const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: '7d' });
 
     return res.status(200).json({

@@ -24,6 +24,7 @@ const createCompanyifnotExists = async (companyData) => {
       companyType: companyData.companyType,
       industry: companyData.industry,
       location: companyData.location,
+      status: true
     },
   });
 
@@ -117,7 +118,7 @@ const getStudentJobsData = async (companyEmail, jobId) => {
   return student
 }
 
-const getAllCompanies = async (req,res) => {
+const getAllCompanies = async (req, res) => {
   const companies = await prisma.companies.findMany({
     include: {
       _count: {

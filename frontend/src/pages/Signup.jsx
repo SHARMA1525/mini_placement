@@ -57,7 +57,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = selected === "student" ? "/student/signup" : "/company/signup";
-    console.log(formState)
+
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}${endpoint}`, {
         method: "POST",
@@ -70,12 +70,12 @@ export default function Signup() {
         localStorage.setItem(`${selected}Token`, data.token);
         navigate(selected === "student" ? '/student/dashboard' : "/company/dashboard")
       }
-      console.log("Response from server:", data);
+
 
     } catch (error) {
       console.error("Error sending request:", error);
     }
-    console.log("Submitting:", selected, formState);
+
   };
 
   return (

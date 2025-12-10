@@ -73,7 +73,7 @@ const StudentDashboard = () => {
         headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' }
       });
       const jobsData = await jobsResponse.json();
-      console.log(jobsData);
+
       const jobsList = jobsData.data
 
       // Fetch applied jobs (NEW)

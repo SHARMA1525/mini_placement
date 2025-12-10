@@ -39,7 +39,7 @@ const CompanyProfile = () => {
                 companyId: data.company.id,
                 companyName: data.company.name,
                 email: data.company.email,
-                websiteUrl: data.company.website,
+                websiteUrl: data.company.websiteUrl,
                 companyType: data.company.companyType,
                 industry: data.company.industry,
                 location: data.company.location,
@@ -353,11 +353,11 @@ const CompanyProfile = () => {
                                 type="url"
                                 name="websiteUrl"
                                 className="form-input"
-                                value={tempData.websiteUrl || ''}
+                                value={tempData.websiteUrl}
                                 onChange={handleChange}
                             />
                         ) : (
-                            <div className="form-value">{formData.websiteUrl || 'N/A'}</div>
+                            <div className="form-value">{formData.websiteUrl}</div>
                         )}
                     </div>
 

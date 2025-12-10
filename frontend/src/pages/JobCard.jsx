@@ -67,7 +67,7 @@ const JobCard = () => {
         e.preventDefault();
         setLoading(true);
         setError(null);
-        console.log("Submitting Form Data:", formData);
+
 
         try {
             const token = localStorage.getItem('companyToken');
@@ -82,7 +82,7 @@ const JobCard = () => {
                 ...formData,
                 skills: formData.skills.split(',').map(s => s.trim()).filter(s => s)
             };
-            console.log("Submitting Payload:", payload);
+
 
             const response = await fetch(url, {
                 method: method,

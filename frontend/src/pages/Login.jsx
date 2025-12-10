@@ -58,7 +58,7 @@ export default function Login() {
 
       localStorage.setItem(`${selected}Token`, data.token);
       navigate(selected === "student" ? '/student/dashboard' : "/company/dashboard")
-      console.log("Login Response:", data);
+
 
     } catch (error) {
       console.error("Login Error:", error);

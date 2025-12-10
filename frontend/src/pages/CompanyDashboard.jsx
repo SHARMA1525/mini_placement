@@ -66,7 +66,7 @@ const CompanyDashboard = () => {
             } else {
                 throw new Error('Invalid company data received');
             }
-            console.log(companyData)
+
 
             setLoading(false);
         } catch (err) {

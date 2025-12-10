@@ -32,7 +32,7 @@ const ListOfJobs = ({ jobs, onRefresh }) => {
                     'Authorization': `Bearer ${token}`
                 }
             });
-            console.log("Delete response:", response);
+
 
             if (response.ok) {
                 onRefresh();

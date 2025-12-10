@@ -32,7 +32,7 @@ model companies {
   industry     String?
   location     String?
   createdAt    DateTime      @default(now())
-  status       Boolean       @default(false)
+  status       Boolean       @default(true)
   jobs         jobs[]
 }
 
